@@ -7,17 +7,29 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using BoldBI.Embed.Sample.Models;
+using System.IO;
 
 namespace BoldBI.Embed.Sample.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BoldBIEmbedController : ControllerBase
+    public class BoldBIEmbedController : Controller
     {
         [HttpGet]
-        public string Get()
+        public IActionResult Get()
         {
-            return "Application Running....";
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+                return Ok("Application Running....");
+            }
+            catch
+            {
+                return View("EmbedConfigErrorLog");
+            }
         }
 
         [HttpGet]
