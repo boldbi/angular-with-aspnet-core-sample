@@ -19,8 +19,6 @@ import { appService } from './app.service';
     public getDashboardsUrl= "api/boldbiembed/getdashboards";
 
     public getEmbedConfigUrl= "api/boldbiembed/getdata";
-
-    public configValue: any;
       
     public dashboards: any;
   
