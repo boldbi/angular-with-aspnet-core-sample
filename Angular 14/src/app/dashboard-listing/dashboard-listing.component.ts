@@ -25,8 +25,8 @@ export class DashboardListing implements OnInit {
     ngOnInit() {    
         
         this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
-            this._appComponent.dashboards = <any>data;
-            this.dashboardService.setEmbedConfig(this._appComponent.dashboards);
+            this._appComponent.embedConfig = <any>data;
+            this.dashboardService.setEmbedConfig(this._appComponent.embedConfig);
             if (this.dashboardService.embedConfig.Environment == "enterprise" || this.dashboardService.embedConfig.Environment == "onpremise") {
                 this._appComponent.baseUrl = this.dashboardService.embedConfig.ServerUrl + "/" + this.dashboardService.embedConfig.SiteIdentifier;
                 this._appComponent.dashboardServerApiUrl = this.dashboardService.embedConfig.ServerUrl + "/api/" + this.dashboardService.embedConfig.SiteIdentifier;
