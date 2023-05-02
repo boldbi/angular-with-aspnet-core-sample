@@ -4,6 +4,7 @@ import { appService } from '../app.service';
 import { AppComponent } from '../app.component';
 import { BoldBI } from '@boldbi/boldbi-embedded-sdk';
 // declare var BoldBI: any;
+ var embedConfig;
 @Component({
     selector: 'app-dashboard-listing',
     templateUrl: './dashboard-listing.component.html',
@@ -16,10 +17,16 @@ export class DashboardListing implements OnInit {
     public dashboardsList!: Item[];
     result: any;
     dashboard: any;
+    embedConfig: any;
     constructor(private _app: appService, private _appComponent: AppComponent) {
     }
 
     ngOnInit() {
+        this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
+            this._appComponent.dashboards = <any>data;
+            embedConfig = this._appComponent.dashboards;
+        })
+
         if (this._appComponent.environment == "enterprise" ||this._appComponent.environment == "onpremise") {
             this._appComponent.baseUrl = this._appComponent.rootUrl + "/" + this._appComponent.siteIdentifier;
             this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api/" + this._appComponent.siteIdentifier;
@@ -37,6 +44,7 @@ export class DashboardListing implements OnInit {
         //         this.dashboardsList = this._appComponent.dashboards;
         //     });
         // });
+
         this._app.GetDashboards(this._appComponent.apiHost + this._appComponent.getDashboardsUrl).subscribe(data => {
             this._appComponent.dashboards = <any>data;
             this.dashboardsList = this._appComponent.dashboards;

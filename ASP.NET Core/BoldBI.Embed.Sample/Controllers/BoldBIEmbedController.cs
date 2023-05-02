@@ -33,6 +33,14 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpGet]
+        [Route("GetData")]
+        public IActionResult GetData()
+        {
+            var jsonData = System.IO.File.ReadAllText("embedConfig.json");
+            return Ok(jsonData);
+        }
+
+        [HttpGet]
         [Route("GetDashboards")]
         public string GetDashboards()
         {

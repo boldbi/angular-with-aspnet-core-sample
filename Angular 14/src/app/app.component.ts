@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { appService } from './app.service';
 
+var embedConfig;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +17,7 @@ import { appService } from './app.service';
     public environment = "enterprise";
   
     //Dashboard Server BI URL (ex: http://localhost:5000/bi, http://demo.boldbi.com/bi)
-    public rootUrl = "http://localhost:5000/bi";
+    public rootUrl = "http://localhost:53150/bi";
   
     //For Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be empty string.
     public siteIdentifier = "site/site1";
@@ -26,6 +27,10 @@ import { appService } from './app.service';
   
     //Url of the GetDashboards action in ValuesController of the ASP.NET Core application
     public getDashboardsUrl= "api/boldbiembed/getdashboards";
+
+    public getEmbedConfigUrl= "api/boldbiembed/getdata";
+
+    public configValue: any;
       
     public dashboards: any;
   
@@ -35,8 +40,9 @@ import { appService } from './app.service';
     
     constructor(private _app: appService) {
     }
-  
+
     ngOnInit() {
+     
     }
   }
 
