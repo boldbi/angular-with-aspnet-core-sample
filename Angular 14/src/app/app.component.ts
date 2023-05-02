@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { appService } from './app.service';
+import { DashboardService } from './dashboard.service';
 
 var embedConfig;
 @Component({
@@ -7,7 +8,7 @@ var embedConfig;
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
+// var embedConfig;
   export class AppComponent {
 
     //ASP.NET Core application would be run on http://localhost:61377/, which needs to be set as `apiHost`
@@ -35,14 +36,40 @@ var embedConfig;
     public dashboards: any;
   
     public baseUrl: any;
+
+    public embedConfig: any;
   
     public dashboardServerApiUrl!: string;
     
-    constructor(private _app: appService) {
+    constructor(private _app: appService, private dashboardService: DashboardService) {
     }
 
-    ngOnInit() {
-     
-    }
+  ngOnInit() {
+
+    this._app.GetEmbedConfig(this.apiHost + this.getEmbedConfigUrl).subscribe(data => {
+      this.dashboards = <any>data;
+      this.dashboardService.setEmbedConfig(this.dashboards);
+      if (this.dashboards.Environment == "enterprise" || this.dashboards.Environment == "onpremise") {
+        this.baseUrl = this.dashboards.ServerUrl + "/" + this.dashboards.SiteIdentifier;
+        this.dashboardServerApiUrl = this.dashboards.rootUrl + "/api/" + this.dashboards.SiteIdentifier;
+      } else {
+        this.baseUrl = this.dashboards.ServerUrl;
+        this.dashboardServerApiUrl = this.dashboards.ServerUrl + "/api";
+      }
+    })
+    // this._app.GetEmbedConfig(this.apiHost + this.getEmbedConfigUrl).subscribe(data => {
+    //   this.dashboards = <any>data;
+    //   embedConfig = this.dashboards;
+    //   if (this.dashboards.Environment == "enterprise" || this.dashboards.Environment == "onpremise") {
+    //     this.baseUrl = this.dashboards.ServerUrl + "/" + this.dashboards.SiteIdentifier;
+    //     this.dashboardServerApiUrl = this.dashboards.rootUrl + "/api/" + this.dashboards.SiteIdentifier;
+    //   }
+    //   else {
+    //     this.baseUrl = this.dashboards.ServerUrl;
+    //     this.dashboardServerApiUrl = this.dashboards.ServerUrl + "/api";
+    //   }
+  //   })
+  // }
   }
+}
 

@@ -3,6 +3,8 @@ import { Item } from '../app';
 import { appService } from '../app.service';
 import { AppComponent } from '../app.component';
 import { BoldBI } from '@boldbi/boldbi-embedded-sdk';
+import { DashboardService } from '../dashboard.service';
+
 // declare var BoldBI: any;
  var embedConfig;
 @Component({
@@ -18,24 +20,37 @@ export class DashboardListing implements OnInit {
     result: any;
     dashboard: any;
     embedConfig: any;
-    constructor(private _app: appService, private _appComponent: AppComponent) {
+    constructor(private _app: appService, private _appComponent: AppComponent, private dashboardService: DashboardService) {
     }
 
-    ngOnInit() {
+    ngOnInit() {    
+        
         this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
             this._appComponent.dashboards = <any>data;
-            embedConfig = this._appComponent.dashboards;
+            this.dashboardService.setEmbedConfig(this._appComponent.dashboards);
+            if (this._appComponent.dashboards.Environment == "enterprise" || this._appComponent.dashboards.Environment == "onpremise") {
+              this._appComponent.baseUrl = this._appComponent.dashboards.ServerUrl + "/" + this._appComponent.dashboards.SiteIdentifier;
+              this._appComponent.dashboardServerApiUrl = this._appComponent.dashboards.rootUrl + "/api/" + this._appComponent.dashboards.SiteIdentifier;
+            } else {
+              this._appComponent.baseUrl = this._appComponent.dashboards.ServerUrl;
+              this._appComponent.dashboardServerApiUrl = this._appComponent.dashboards.ServerUrl + "/api";
+            }
         })
 
-        if (this._appComponent.environment == "enterprise" ||this._appComponent.environment == "onpremise") {
-            this._appComponent.baseUrl = this._appComponent.rootUrl + "/" + this._appComponent.siteIdentifier;
-            this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api/" + this._appComponent.siteIdentifier;
-        }
-        else {
-            this._appComponent.baseUrl = this._appComponent.rootUrl;
-            this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api";
+        // this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
+        //     this._appComponent.dashboards = <any>data;
+        //     embedConfig = this._appComponent.dashboards;
+        // })
 
-        }
+        // if (this._appComponent.environment == "enterprise" ||this._appComponent.environment == "onpremise") {
+        //     this._appComponent.baseUrl = this._appComponent.rootUrl + "/" + this._appComponent.siteIdentifier;
+        //     this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api/" + this._appComponent.siteIdentifier;
+        // }
+        // else {
+        //     this._appComponent.baseUrl = this._appComponent.rootUrl;
+        //     this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api";
+
+        // }
         // this._app.Gettoken(this._appComponent.dashboardServerApiUrl,this._appComponent.userId,this._appComponent.userPassword).subscribe(data => {
         //     this.result = data;
         //     this._appComponent.token = JSON.parse(this.result.Token).access_token;
@@ -44,6 +59,19 @@ export class DashboardListing implements OnInit {
         //         this.dashboardsList = this._appComponent.dashboards;
         //     });
         // });
+
+        // this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
+        //     this._appComponent.dashboards = <any>data;
+        //     embedConfig = this._appComponent.dashboards;
+        //     if (this._appComponent.environment == "enterprise" ||this._appComponent.environment == "onpremise") {
+        //       this._appComponent.baseUrl = this._appComponent.rootUrl + "/" + this._appComponent.siteIdentifier;
+        //       this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api/" + this._appComponent.siteIdentifier;
+        //   }
+        //   else {
+        //       this._appComponent.baseUrl = this._appComponent.rootUrl;
+        //       this._appComponent.dashboardServerApiUrl = this._appComponent.rootUrl + "/api";
+        //   }
+        // })
 
         this._app.GetDashboards(this._appComponent.apiHost + this._appComponent.getDashboardsUrl).subscribe(data => {
             this._appComponent.dashboards = <any>data;
@@ -54,11 +82,11 @@ export class DashboardListing implements OnInit {
 
     renderDashboard(dashboard: Item) {
         this.dashboard= BoldBI.create({
-            serverUrl: this._appComponent.baseUrl,
+            serverUrl: this.dashboardService.embedConfig.ServerUrl + "/" + this.dashboardService.embedConfig.SiteIdentifier,
             dashboardId: dashboard.Id,
             embedContainerId: "dashboard",
             embedType: BoldBI.EmbedType.Component,
-            environment: ((this._appComponent.environment=="enterprise") || (this._appComponent.environment == "onpremise"))? BoldBI.Environment.Enterprise:BoldBI.Environment.Cloud,
+            environment: ((this.dashboardService.embedConfig.Environment=="enterprise") || (this.dashboardService.embedConfig.Environment == "onpremise"))? BoldBI.Environment.Enterprise:BoldBI.Environment.Cloud,
             width:"100%",
             height:"100%",
             expirationTime:100000,
