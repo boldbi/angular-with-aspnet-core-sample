@@ -13,24 +13,25 @@ This section guides you in using the Bold BI dashboard in your Angular with ASP.
 
 The samples require the following requirements to run.
 
- * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
  * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
  * [Node.js](https://nodejs.org/en/)
  * [Visual Studio Code](https://code.visualstudio.com/download)
 
  ## Using the Angular with ASP.NET Core sample
  
- * Open the ASP.NET Core sample's solution file `Syncfusion.Server.EmbedBoldBI.sln` in Visual studio. 
+  * Open the ASP.NET Core sample in Visual Studio Code. 
 
- * Open the EmbedProperties.cs file in the following location, /Models/EmbedProperties.cs.
-
- * Please change the following properties in the `EmbedProperties.cs` file as per your Bold BI Server.
+ * This [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/) using able to download the embedConfig.json file. 
+ 
+ * Copy the downloaded embedConfig.json file and paste it into the sample [application](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample).
+ 
+ * The following properties are used in `embedConfig.json` file:
 
     <meta charset="utf-8"/>
     <table>
     <tbody>
         <tr>
-            <td align="left">RootUrl</td>
+            <td align="left">ServerUrl</td>
             <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
         </tr>
         <tr>
@@ -49,46 +50,24 @@ The samples require the following requirements to run.
             <td align="left">UserEmail</td>
             <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
         </tr>
+        <tr>
+            <td align="left">DashboardId</td>
+            <td align="left">Item id of the dashboard to be embedded in your application.</td>
+        </tr>
+        <tr>
+            <td align="left">EmbedType</td>
+            <td align="left">BoldBI.EmbedType.Component.</td>
+        </tr>
+        <tr>
+            <td align="left">ExpirationTime</td>
+            <td align="left">Token expiration time.</td>
+        </tr>
     </tbody>
     </table>
 
 * Now run the back-end Asp.Net Core sample.
 
 * Open the `Angular` sample in Visual studio code.
-
-* Open the `app.component.ts` in following location, /src/app/app.component.ts.
-
-* please change the following properties in the `app.compenent.ts` file as per the your Bold BI server and back-end application.
-
-    <meta charset="utf-8"/>
-    <table>
-    <tbody>
-        <tr>
-            <td align="left">apiHost</td>
-            <td align="left">ASP.NET Core application would be run on http://localhost:61377/, which needs to be set as apiHost.</td>
-        </tr>
-        <tr>
-            <td align="left">environment</td>
-            <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
-        </tr>
-        <tr>
-            <td align="left">rootUrl</td>
-            <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
-        </tr>
-        <tr>
-            <td align="left">siteIdentifier</td>
-            <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
-        </tr>
-        <tr>
-            <td align="left">authorizationUrl</td>
-            <td align="left">Url of the 'GetDetails' action in the ASP.NET application.</td>
-        </tr>
-        <tr>
-            <td align="left">getDashboardsUrl</td>
-            <td align="left">Url of the GetDashboards action in ValuesController of the ASP.NET Core application</td>
-        </tr>
-    </tbody>
-    </table>
 
 ### Install npm
 
