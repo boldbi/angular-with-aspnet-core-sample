@@ -12,8 +12,6 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
  * [Node.js](https://nodejs.org/en/)
  * [Visual Studio Code](https://code.visualstudio.com/download)
 
- > **Note:** NodeJS version >=16.17.0 is required to use.
-
  ### Help link
 
  * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
@@ -72,7 +70,7 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
 
 ## How to run sample using command prompt 
     
-  ### ASP.NET Core sample: 
+  #### ASP.NET Core sample: 
 
   1. Open command prompt in this file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/ASP.NET%20Core/BoldBI.Embed.Sample) of the back-end ASP.NET Core sample.
 
@@ -80,7 +78,7 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
   
   3. Run the application using the command `dotnet run`.
 
-  ### Angular sample:
+  #### Angular sample:
 
   1. Open command prompt in this file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) of the Angular sample.
 
@@ -96,9 +94,9 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
 
   * Visual studio code(https://code.visualstudio.com/download)
 
- ## How to run sample using visual studio code
+  ### How to run sample using visual studio code
 
-  ### ASP.NET Core sample: 
+  #### ASP.NET Core sample: 
 
   1. Open the Visual Studio code in this file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/ASP.NET%20Core/BoldBI.Embed.Sample) of the back-end ASP.NET Core sample.
 
@@ -106,7 +104,7 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
   
   3. Run the application using the command `dotnet run`.
 
-  ### Angular sample:
+  #### Angular sample:
 
  1. Open Visual Studio code in this file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) of the Angular sample.
 
