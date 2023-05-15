@@ -121,6 +121,10 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
 
 Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
 
+## Important notes:
+
+It is recommended to not store passwords and sensitive information in configuration files for security reasons, in a real-world application. Instead, you should consider using a secure application, such as Key Vault, to safeguard your credentials.
+
 ## Online Demos
 
 Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.com/embed).
