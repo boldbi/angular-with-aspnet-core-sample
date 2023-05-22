@@ -13,7 +13,7 @@ import { appService } from './app.service';
     public apiHost="https://localhost:5001/";
   
     //Url of the GetDetails action in ValuesController of the ASP.NET Core application
-    public authorizationUrl= "api/boldbiembed/getdetails";
+    public authorizationUrl= "api/boldbiembed/authorizationserver";
   
     //Url of the GetDashboards action in ValuesController of the ASP.NET Core application
     public getDashboardsUrl= "api/boldbiembed/getdashboards";

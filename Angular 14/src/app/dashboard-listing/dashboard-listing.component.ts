@@ -55,7 +55,7 @@ export class DashboardListing implements OnInit {
     renderDashboard(dashboard: Item) {
         this.dashboard= BoldBI.create({
             serverUrl: this._appComponent.baseUrl,
-            dashboardId: dashboard.Id,
+            dashboardId: this.dashboardService.embedConfig.DashboardId,
             embedContainerId: "dashboard",
             embedType: BoldBI.EmbedType.Component,
             environment: ((this.dashboardService.embedConfig.Environment=="enterprise") || 
