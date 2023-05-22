@@ -1,4 +1,4 @@
-using BoldBI.Embed.Sample.Models;
+using BoldBI.Embed.Sample.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

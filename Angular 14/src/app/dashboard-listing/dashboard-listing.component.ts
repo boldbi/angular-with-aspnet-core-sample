@@ -58,7 +58,8 @@ export class DashboardListing implements OnInit {
             dashboardId: dashboard.Id,
             embedContainerId: "dashboard",
             embedType: BoldBI.EmbedType.Component,
-            environment: ((this.dashboardService.embedConfig.Environment=="enterprise") || (this.dashboardService.embedConfig.Environment == "onpremise"))? BoldBI.Environment.Enterprise:BoldBI.Environment.Cloud,
+            environment: ((this.dashboardService.embedConfig.Environment=="enterprise") || 
+            (this.dashboardService.embedConfig.Environment == "onpremise"))? BoldBI.Environment.Enterprise:BoldBI.Environment.Cloud,
             width:"100%",
             height:"100%",
             expirationTime:100000,

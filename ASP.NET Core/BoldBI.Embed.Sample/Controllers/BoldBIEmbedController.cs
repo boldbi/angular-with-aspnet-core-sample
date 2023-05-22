@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using BoldBI.Embed.Sample.Models;
+using BoldBI.Embed.Sample.Model;
 using System.IO;
 
 namespace BoldBI.Embed.Sample.Controllers
@@ -78,8 +78,8 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpPost]
-        [Route("GetDetails")]
-        public string GetDetails([FromBody] object embedQuerString)
+        [Route("AuthorizationServer")]
+        public string AuthorizationServer([FromBody] object embedQuerString)
         {
             var embedClass = Newtonsoft.Json.JsonConvert.DeserializeObject<EmbedClass>(embedQuerString.ToString());
 
