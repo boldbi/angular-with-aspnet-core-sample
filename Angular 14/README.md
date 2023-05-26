@@ -11,7 +11,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
  * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
  * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** Node.js versions 14.16 to 18.16 are supported.
+ > **NOTE:** Node.js versions 12.13 to 18.16 are supported.
 
  #### Help link
 
@@ -72,7 +72,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   #### Angular sample:
 
-  1. Open the React sample in Visual Studio Code.
+  1. Open the Angular sample in Visual Studio Code.
 
   2. To install all dependent packages, use the following command `npm install`. To install the Bold BI Embedded SDK package, use the following command `npm install -save @boldbi/boldbi-embedded-sdk`.
 

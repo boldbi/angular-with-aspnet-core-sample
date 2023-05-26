@@ -11,7 +11,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
  * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
  * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** The version of Node.js is 14.16.
+ > **NOTE:** Node.js versions 14.16 to 18.16 are supported.
 
  #### Help link
 
@@ -48,7 +48,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   * Visual studio code(https://code.visualstudio.com/download)
 
-  ### How to run sample using visual studio code
+  ### Run a Sample Using Visual Studio Code
 
   1. Open the Angular with ASP.NET Core sample in Visual Studio Code.
 
