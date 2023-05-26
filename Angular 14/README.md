@@ -32,7 +32,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   * Copy the downloaded embedConfig.json file and paste it into the designated [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) within the application. Please ensure that you have placed it in the application as shown in the following image.
     
-  ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
+    ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
 ## Run a Sample Using Command Prompt
     
