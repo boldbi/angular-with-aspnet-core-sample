@@ -22,18 +22,17 @@ app.UseCors(corsPolicyBuilder => corsPolicyBuilder
     .AllowAnyHeader()
 );
 
- string basePath = AppDomain.CurrentDomain.BaseDirectory;
- string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
- GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+string basePath = AppDomain.CurrentDomain.BaseDirectory;
+string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
+GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
 
-
 app.MapControllerRoute(
     name: "default",
-    pattern: "{BoldBIEmbed}/{action=Get}/{id?}");
+    pattern: "{BoldBIEmbed}/{action=GetData}/{id?}");
 
 app.MapFallbackToFile("index.html");
 
