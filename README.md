@@ -23,14 +23,14 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
  ## Configuration
 
-  * Please ensure that you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file) to enable it.
+  * Please ensure that you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code) to enable it.
   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
 
-  * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file) for reference. Additionally, you can refer to the following image for visual guidance.
+  * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file) for reference. Additionally, you can refer to the following image for visual guidance.
     ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
     ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
 
-  * Copy the downloaded embedConfig.json file and paste it into the designated [location](https://github.com/boldbi/react-with-aspnet-core-sample/tree/master/AngularwithASP.NETCore) within the application. Please ensure that you have placed it in the application as shown in the following image.
+  * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/ASP.NET%20Core/BoldBI.Embed.Sample) within the application. Please ensure that you have placed it in the application as shown in the following image.
     
     ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
@@ -63,7 +63,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
      ![dashboard view](https://github.com/boldbi/aspnet-core-sample/assets/91586758/7a9786ba-6dc1-4661-b8bb-3bad3d6dcc9a)
 
 
-Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
+Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
 
 ## Important notes
 

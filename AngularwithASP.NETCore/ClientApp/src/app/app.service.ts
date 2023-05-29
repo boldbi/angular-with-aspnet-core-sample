@@ -13,19 +13,19 @@ export class appService {
     constructor(private http: HttpClient) {
     }
 
-    public Gettoken(dashboardServerApiUrl: string,userId: string, userPassword: string) {
-        this.header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+    // public Gettoken(dashboardServerApiUrl: string,userId: string, userPassword: string) {
+    //     this.header = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
 
-        let body = new HttpParams();
-        body = body.set('UserId', userId);
-        body = body.set('Password', userPassword);
+    //     let body = new HttpParams();
+    //     body = body.set('UserId', userId);
+    //     body = body.set('Password', userPassword);
 
-        return this.http.post(dashboardServerApiUrl + '/get-user-key', body, {
-            headers: this.header,
-        }).pipe(res => {
-            return <any>res;
-        });
-    }
+    //     return this.http.post(dashboardServerApiUrl + '/get-user-key', body, {
+    //         headers: this.header,
+    //     }).pipe(res => {
+    //         return <any>res;
+    //     });
+    // }
 
     public GetDashboards(getDashboardsUrl: string) {
         this.header = new HttpHeaders();
