@@ -16,12 +16,29 @@ namespace AngularwithASP.NETCore.Controllers
     public class BoldBIEmbedController : Controller
     {
         [HttpGet]
+        public IActionResult Get()
+        {
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+                return Ok("Application Running....");
+            }
+            catch
+            {
+                return View("EmbedConfigErrorLog");
+            }
+        }
+
+         [HttpGet]
         [Route("GetData")]
         public IActionResult GetData()
         {
             var jsonData = System.IO.File.ReadAllText("embedConfig.json");
             return Ok(jsonData);
         }
+
 
         [HttpGet]
         [Route("GetDashboards")]

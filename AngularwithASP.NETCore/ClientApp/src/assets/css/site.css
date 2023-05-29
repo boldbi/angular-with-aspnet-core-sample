@@ -140,3 +140,17 @@ body html {
     height: 900px;
     border: 2px solid #333;
   }
+
+  .dashboard_container {
+    height: 775px !important;
+    width: 1685px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .e-waitpopup-pane {
+    display: none;
+  }
+  

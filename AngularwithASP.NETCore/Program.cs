@@ -31,9 +31,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 
-// app.MapControllerRoute(
-//     name: "default",
-//     pattern: "{BoldBIEmbed}/{action=Get}/{id?}");
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{BoldBIEmbed}/{action=Get}/{id?}");
 
 app.MapFallbackToFile("index.html");
 
