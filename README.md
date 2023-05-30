@@ -40,7 +40,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
 
-  3.  To install all dependent packages, use the following command `npm install`. To install the Bold BI Embedded SDK package, use the following command `npm install -save @boldbi/boldbi-embedded-sdk`.
+  3.  To install all dependent packages, use the following command `npm install`.
   
   4. Finally, run the application using the command `dotnet run`.
 
@@ -56,7 +56,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
  
   3. Build your .NET project by executing the `dotnet build` command in the terminal.
 
-  4.  To install all dependent packages, use the following command `npm install`. To install the Bold BI Embedded SDK package, use the following command `npm install -save @boldbi/boldbi-embedded-sdk`.
+  4.  To install all dependent packages, use the following command `npm install`.
   
   5. To run the application, use the command `dotnet run` in the terminal. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:3000).
 

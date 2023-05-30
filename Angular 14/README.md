@@ -50,7 +50,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   1. Open the command prompt and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) where the project is located.
 
-  2. To install all dependent packages, use the following command `npm install`. To install the Bold BI Embedded SDK package, use the following command `npm install -save @boldbi/boldbi-embedded-sdk`.
+  2. To install all dependent packages, use the following command `npm install`.
 
   3. Finally, run the application using the command `npm start`.
 
@@ -76,7 +76,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   1. Open the Angular sample in Visual Studio Code.
 
-  2. To install all dependent packages, use the following command `npm install`. To install the Bold BI Embedded SDK package, use the following command `npm install -save @boldbi/boldbi-embedded-sdk`.
+  2. To install all dependent packages, use the following command `npm install`.
 
   3. To run the application, use the command `npm start` in the terminal.  After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (http://localhost:3000). Please refer to the following image.
 
