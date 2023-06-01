@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
-using BoldBI.Embed.Sample.Model;
 using System.IO;
 
 namespace BoldBI.Embed.Sample.Controllers
