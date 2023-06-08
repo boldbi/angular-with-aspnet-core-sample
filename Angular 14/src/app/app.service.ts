@@ -38,4 +38,11 @@ export class appService {
             return <any>res;
         });
     }
+
+    public GetEmbedConfig(getDashboardsUrl: string) {
+        return this.http.get(getDashboardsUrl, {
+        }).pipe(res => {
+            return <any>res;
+        });
+    }
 }

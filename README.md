@@ -1,131 +1,78 @@
-# BoldBI Embedding Angular with ASP.NET Core Samples
+# Bold BI Embedded Sample in Angular with ASP.NET Core
 
- This Bold BI Angular with Asp.Net Core sample contains Angular 14 as front-end sample and Asp.Net Core as back-end sample. This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
+This project was created using ASP.NET Core 6.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
-This section guides you in using the Bold BI dashboard in your Angular with ASP.NET Core sample application.
+## Dashboard view
 
- * [Requirements to run the demo](#requirements-to-run-the-demo)
- * [Using the Angular with ASP.NET Core sample](#using-the-Angular-with-ASP.NET-Core-sample)
- * [Online Demos](#online-demos)
- * [Documentation](#documentation)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
- ## Requirements to run the demo
-
-The samples require the following requirements to run.
-
- * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+ ## Requirements/Prerequisites
+ 
  * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
  * [Node.js](https://nodejs.org/en/)
- * [Visual Studio Code](https://code.visualstudio.com/download)
 
- ## Using the Angular with ASP.NET Core sample
+ > **NOTE:** Node.js v14.16 to v18.16 are supported
+
+ #### Help link
+
+ * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
+
+ #### Supported browsers
+  
+  * Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
+
+ ## Configuration
+
+  * Please [get](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular-with-ASP.NETCore) the Angular with ASP.NET Core sample from GitHub.
+
+  * Please ensure you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code) to enable it.
+  ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+
+  * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file) for reference. Additionally, you can refer to the following image for visual guidance.
+    ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
+    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+
+  * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular-with-ASP.NETCore) within the application. Please ensure you have placed it in the application, as shown in the following image.
+    
+    ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/95e8e272-53e8-449a-8a46-592cf8646d7c)
+
+## Run a Sample Using Command Line Interface
+
+  1. Open the command line interface and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular-with-ASP.NETCore) where the project is located.
+
+  2. To install all dependent packages using the following command `npm install`.
+
+  3. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
+  
+  4. Finally, run the application using the command `dotnet run`. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:3000).
+
+
+ ## Developer IDE
+
+  * Visual studio code(https://code.visualstudio.com/download)
+
+  ### Run a Sample Using Visual Studio Code
+
+  1. Open the Angular with ASP.NET Core sample in Visual Studio Code.
+
+  2. Open the terminal in Visual Studio Code and install all dependent packages using the following command `npm install`.
+
+  3. Execute the command `dotnet restore` to restore the required dependencies.
  
- * Open the ASP.NET Core sample's solution file `Syncfusion.Server.EmbedBoldBI.sln` in Visual studio. 
+  4. Build your .NET project by executing the `dotnet build` command in the terminal.
+  
+  5. To run the application, use the command `dotnet run` in the terminal. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:3000).
 
- * Open the EmbedProperties.cs file in the following location, /Models/EmbedProperties.cs.
+     ![dashboard view](https://github.com/boldbi/aspnet-core-sample/assets/91586758/7a9786ba-6dc1-4661-b8bb-3bad3d6dcc9a)
 
- * Please change the following properties in the `EmbedProperties.cs` file as per your Bold BI Server.
 
-    <meta charset="utf-8"/>
-    <table>
-    <tbody>
-        <tr>
-            <td align="left">RootUrl</td>
-            <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
-        </tr>
-        <tr>
-            <td align="left">EmbedSecret</td>
-            <td align="left">Get your EmbedSecret key from the Embed tab by enabling the `Enable embed authentication` on the Administration page https://help.boldbi.com/embedded-bi/site-administration/embed-settings/.</td>
-        </tr>
-        <tr>
-            <td align="left">SiteIdentifier</td>
-            <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
-        </tr>
-        <tr>
-            <td align="left">Environment</td>
-            <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
-        </tr>
-        <tr>
-            <td align="left">UserEmail</td>
-            <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
-        </tr>
-    </tbody>
-    </table>
+Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
 
-* Now run the back-end Asp.Net Core sample.
+## Important notes
 
-* Open the `Angular` sample in Visual studio code.
+It is recommended not to store passwords and sensitive information in configuration files for security reasons in a real-world application. Instead, it would be best if you considered using a secure application, such as Key Vault, to safeguard your credentials.
 
-* Open the `app.component.ts` in following location, /src/app/app.component.ts.
-
-* please change the following properties in the `app.compenent.ts` file as per the your Bold BI server and back-end application.
-
-    <meta charset="utf-8"/>
-    <table>
-    <tbody>
-        <tr>
-            <td align="left">apiHost</td>
-            <td align="left">ASP.NET Core application would be run on http://localhost:61377/, which needs to be set as apiHost.</td>
-        </tr>
-        <tr>
-            <td align="left">environment</td>
-            <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
-        </tr>
-        <tr>
-            <td align="left">rootUrl</td>
-            <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
-        </tr>
-        <tr>
-            <td align="left">siteIdentifier</td>
-            <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
-        </tr>
-        <tr>
-            <td align="left">authorizationUrl</td>
-            <td align="left">Url of the 'GetDetails' action in the ASP.NET application.</td>
-        </tr>
-        <tr>
-            <td align="left">getDashboardsUrl</td>
-            <td align="left">Url of the GetDashboards action in ValuesController of the ASP.NET Core application</td>
-        </tr>
-    </tbody>
-    </table>
-
-### Install npm
-
-To install all dependent packages, use the below command
-
-```bash
-npm install
-```
-
-### Install Angular 14
-
-To install Angular 14 use below command,
-
-```bash
-npm i @angular/cli@14.0.6
-```
-Once installed, ensure the installed version using the command <code>ng --version</code>
-
-### Install Bold BI Embedded SDK package
-
-To install the Bold BI Embedded SDK package using the following command,
-
-```bash
-npm install -save @boldbi/boldbi-embedded-sdk
-```
-
-### Run/Serve
-
-To run the samples, use the below command
-
-```bash
-npm start
-```
-
-Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
-
-## Online Demos
+## Online demos
 
 Look at the Bold BI Embedding sample to live demo [here](https://samples.boldbi.com/embed).
 

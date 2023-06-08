@@ -1,33 +1,34 @@
 body html {
     width: 100%;
     height: 100%;
-  }
+}
 
-  html,
-  body,
-  app-root {
+html,
+body,
+app-root {
     width: 100%;
     height: 100%;
     margin: 0;
     font-family: Roboto;
     font-size: 13px;
-  }
-  ul {
+}
+
+ul {
     list-style-type: none;
     padding-left: 0;
-  }
+}
 
-  .tab {
+.tab {
     padding-top: 2px;
     padding-bottom: 18px;
     cursor: pointer
-  }
+}
 
-  .active {
+.active {
     background-color: burlywood;
-  }
+}
 
-  .e-dbrd-blueWaitingIndcator {
+.e-dbrd-blueWaitingIndcator {
     -webkit-animation: rotate 2s linear infinite;
     animation: rotate 2s linear infinite;
     height: 54px;
@@ -35,9 +36,9 @@ body html {
     top: 50%;
     left: 50%;
     position: relative;
-  }
+}
 
-  .e-waiting {
+.e-waiting {
     position: fixed;
     display: block;
     margin: 0px auto;
@@ -45,9 +46,9 @@ body html {
     height: 54px;
     zoom: 0.5;
     margin-left: 55px;
-  }
+}
 
-  #container {
+#container {
     width: 13%;
     float: left;
     height: 100%;
@@ -57,48 +58,48 @@ body html {
     box-shadow: 2px 0 4px 0 rgba(0, 0, 0, .12);
     overflow: auto;
     overflow-x: hidden;
-  }
+}
 
-  #grid-title {
+#grid-title {
     font-size: 17px;
     border-bottom: 1px solid #333;
     padding: 15px;
-  }
+}
 
-  #panel {
+#panel {
     width: 100%;
     float: left;
     background: #f4f4f4;
     overflow: auto;
-  }
+}
 
-  #dashboard {
+#dashboard {
     width: 100%;
     float: left;
     height: 100%;
     display: block;
-  }
+}
 
-  .dashboard-item {
+.dashboard-item {
     padding: 10px;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
-  }
+}
 
-  #viewer-section {
-    width: 100%;
+#viewer-section {
+    width: 87%;
     height: 100%;
     float: left;
-  }
+}
 
-  #viewer-header {
+#viewer-header {
     padding: 10px;
     display: block;
     float: left;
     width: 100%;
-  }
+}
 
-  #create-dashboard {
+#create-dashboard {
     float: right;
     margin-right: 20px;
     background: #0565ff;
@@ -115,9 +116,9 @@ body html {
     outline: none;
     text-align: center;
     border: 1px solid #0450cc;
-  }
+}
 
-  #edit-dashboard {
+#edit-dashboard {
     float: right;
     background: #fff;
     margin-right: 20px;
@@ -134,9 +135,27 @@ body html {
     outline: none;
     text-align: center;
     border: 1px solid #b3b3b3;
-  }
+}
 
-  #dashboardDesigner{
+#dashboardDesigner {
     height: 900px;
     border: 2px solid #333;
-  }
+}
+
+#custom_ok_button {
+    margin: 10px 0;
+    padding: 4px 8px;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 4px;
+    background: #fff;
+    border: 0.5px solid #e2e8f0;
+    color: #2d3748;
+    float: right;
+    margin-left: 12px;
+    margin-right: 17px;
+}
+
+#sample_dialog {
+    width: 385px;
+}
