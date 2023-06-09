@@ -22,5 +22,5 @@ ul { list-style-type: none; padding-left: 0; }
 #edit-dashboard {
 float: right; background: #fff; margin-right: 20px; border: 0; border-radius: 4px; color: #333; cursor: pointer; display: inline-block; font-size: 12px; font-weight: 600; height: 28px; line-height: 28px; min-width: 90px; outline: none; text-align: center; border: 1px solid #b3b3b3; }
 #dashboardDesigner{ height: 900px; border: 2px solid #333; }
-.dashboard_container { height: 775px !important; width: 1685px !important; margin-left: 0px !important; margin-right: 0px !important; margin-top: 0px !important; margin-bottom: 0px !important;}
+.dashboard_container { height: 750px !important; width: 1585px !important; margin-left: 0px !important; margin-right: 0px !important; margin-top: 0px !important; margin-bottom: 0px !important;}
 .e-waitpopup-pane { display: none; }
