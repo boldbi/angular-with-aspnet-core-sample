@@ -10,7 +10,7 @@ import { appService } from './app.service';
   export class AppComponent {
 
     //ASP.NET Core application would be run on https://localhost:5001;http://localhost:5000, which needs to be set as `apiHost`
-    public apiHost="https://localhost:5001/";
+    public apiHost="http://localhost:5000/";
   
     //Url of the GetDetails action in ValuesController of the ASP.NET Core application
     public authorizationUrl= "api/boldbiembed/authorizationserver";

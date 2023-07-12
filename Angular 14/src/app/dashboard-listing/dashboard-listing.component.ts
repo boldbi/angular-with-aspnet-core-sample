@@ -67,7 +67,6 @@ export class DashboardListing implements OnInit {
             }
         });
 
-        console.log(this.dashboard);
         this.dashboard.loadDashboard();        
     } 
 }

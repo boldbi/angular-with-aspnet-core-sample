@@ -4,7 +4,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/3e70fa58-908c-415a-9fa0-ef624e955d52)
 
  ## Requirements/Prerequisites
  
@@ -12,10 +12,6 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
  * [Node.js](https://nodejs.org/en/)
 
  > **NOTE:** Node.js v14.16 to v18.16 are supported
-
- #### Help link
-
- * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
 
  #### Supported browsers
   
@@ -44,7 +40,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
   
-  3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., https://localhost:5001/api/boldbiembed). Copy this URL and paste it into your default web browser.
+  3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:5000/api/boldbiembed). Copy this URL and paste it into your default web browser.
 
   #### Angular sample:
 
@@ -52,7 +48,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
   2. To install all dependent packages, use the following command `npm install`.
 
-  3. Finally, run the application using the command `npm start`. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:3000).
+  3. Finally, run the application using the command `npm start`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:4200). Copy this URL and paste it into your default web browser.
 
  ## Developer IDE
 
@@ -68,9 +64,9 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
  
   3. Build your .NET project by executing the `dotnet build` command in the terminal.
   
-  4. To run the application, use the command `dotnet run` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., https://localhost:5001/api/boldbiembed). Copy this URL and paste it into your default web browser.
+  4. To run the application, use the command `dotnet run` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:5000/api/boldbiembed). Copy this URL and paste it into your default web browser.
     
-      ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/cc794823-84a3-45cb-92a5-f38991902121)
+      ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6bf36f94-3ec2-4a01-a2c1-28096fd7c8b1)
 
   #### Angular sample:
 
@@ -78,9 +74,9 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
   2. To install all dependent packages, use the following command `npm install`.
 
-  3. To run the application, use the command `npm start` in the terminal.  After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (http://localhost:3000). Please refer to the following image.
+  3. To run the application, use the command `npm start` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:4200). Copy this URL and paste it into your default web browser.
 
-     ![dashboard view](https://github.com/boldbi/aspnet-core-sample/assets/91586758/7a9786ba-6dc1-4661-b8bb-3bad3d6dcc9a)
+     ![dashboard view](https://github.com/boldbi/aspnet-core-sample/assets/91586758/3e70fa58-908c-415a-9fa0-ef624e955d52)
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/angular-with-javascript/#how-to-run-the-sample) to know how to run the sample.
 
