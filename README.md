@@ -11,7 +11,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
  * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
  * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** Node.js v14.16 to v18.18 are supported
+ > **NOTE:** Node.js v14.20 to v18.18 are supported
 
  #### Help link
 
