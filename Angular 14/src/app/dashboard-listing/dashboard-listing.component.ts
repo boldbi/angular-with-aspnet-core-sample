@@ -26,7 +26,15 @@ export class DashboardListing implements OnInit {
         
         this._app.GetEmbedConfig(this._appComponent.apiHost + this._appComponent.getEmbedConfigUrl).subscribe(data => {
             this._appComponent.embedConfig = <any>data;
-            this.dashboardService.setEmbedConfig(this._appComponent.embedConfig);
+            // Transform camelCase keys to PascalCase
+            const transformedEmbedConfigData = {
+                DashboardId: this._appComponent.embedConfig.dashboardId,
+                EmbedType: this._appComponent.embedConfig.embedType,
+                Environment: this._appComponent.embedConfig.environment,
+                ServerUrl: this._appComponent.embedConfig.serverUrl,
+                SiteIdentifier: this._appComponent.embedConfig.siteIdentifier
+            };
+            this.dashboardService.setEmbedConfig(transformedEmbedConfigData);
             if (this.dashboardService.embedConfig.Environment == "enterprise" || this.dashboardService.embedConfig.Environment == "onpremise") {
                 this._appComponent.baseUrl = this.dashboardService.embedConfig.ServerUrl + "/" + this.dashboardService.embedConfig.SiteIdentifier;
                 this._appComponent.dashboardServerApiUrl = this.dashboardService.embedConfig.ServerUrl + "/api/" + this.dashboardService.embedConfig.SiteIdentifier;
