@@ -8,10 +8,10 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
  ## Requirements/Prerequisites
  
- * [.NET Core 6.0](https://dotnet.microsoft.com/en-us/download/dotnet-core)
+ * [.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
  * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** Node.js v14.20 to v20.14 are supported
+ > **NOTE:** Node.js v14.16 to v20.15 are supported
 
  #### Help link
 
