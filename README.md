@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in Angular with ASP.NET Core
 
-This project was created using ASP.NET Core 6.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
+This project was created using ASP.NET Core 8.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
 ## Dashboard view
 
