@@ -34,7 +34,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Run a Sample Using Command Line Interface
 
-### ASP.NET Core sample
+### ASP.NET Core sample via CLI
 
   1. Open the command line interface and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/ASP.NET%20Core/BoldBI.Embed.Sample) where the project is located.
 
@@ -42,7 +42,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
   
   3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., <http://localhost:5000/api/boldbiembed>). Copy this URL and paste it into your default web browser.
 
-### Angular sample
+### Angular sample via CLI
 
   1. Open the command prompt and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) where the project is located.
 
@@ -56,7 +56,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Run a Sample Using Visual Studio Code
 
-### ASP.NET Core sample
+### ASP.NET Core sample via VS Code
 
   1. Open the ASP.NET Core sample in Visual Studio Code.
 
@@ -68,7 +68,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
       ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6bf36f94-3ec2-4a01-a2c1-28096fd7c8b1)
 
-### Angular sample
+### Angular sample via VS Code
 
   1. Open the Angular sample in Visual Studio Code.
 
