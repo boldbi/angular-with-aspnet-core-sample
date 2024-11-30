@@ -69,9 +69,7 @@ export class DashboardListing implements OnInit {
             width:"100%",
             height:"100%",
             expirationTime:100000,
-            authorizationServer: {
-                url:this._appComponent.apiHost + this._appComponent.authorizationUrl
-            }
+            token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkxNTQyNjOTk0L2JpL3NpdGUiJodHRwOi8R0ZPLNhUkhy9ddoidiqlE915obE" // This must be your unique user access token
         });
 
         console.log(this.dashboard);
