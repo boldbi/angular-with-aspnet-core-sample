@@ -4,7 +4,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Dashboard view
 
-![Dashboard View](/images/dashboard.png)
+![Dashboard View](/images/angular-dashboard.png)
 
 ## Requirements/Prerequisites
 
@@ -15,7 +15,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ### Supported browsers
   
-* Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
+* Google Chrome, Microsoft Edge, and Mozilla Firefox.
 
 ## Configuration
 
@@ -25,12 +25,12 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks) for reference. Additionally, you can refer to the following image for visual guidance.
 
-    ![Embed Settings Download](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d27d4cfc-6a3e-4c34-975e-f5f22dea6172)
-    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
+    ![Embed Settings Download](/images/download-embedsecretkey.png)
+    ![EmbedConfig Properties](/images/embedconfig-file.png)
 
 * Copy the downloaded `embedConfig.json` file and paste it into the designated [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/ASP.NET%20Core/BoldBI.Embed.Sample) within the application. Please ensure you have placed it in the application, as shown in the following image.
 
-    ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
+    ![EmbedConfig image](/images/core-embedconfig-location.png)
 
 ## Run a Sample Using Command Line Interface
 
@@ -40,7 +40,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
   
-  3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., <http://localhost:5000/api/boldbiembed>). Copy this URL and paste it into your default web browser.
+  3. Finally, run the application using the command `dotnet run`. Once the application has started, it will display a URL in the command line interface, typically something like http://localhost:5000. Copy this URL and paste it into your default web browser, appending `/api/boldbiembed` to it.
 
 ### Angular sample via CLI
 
@@ -64,9 +64,9 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
   3. Build your .NET project by executing the `dotnet build` command in the terminal.
   
-  4. To run the application, use the command `dotnet run` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., <http://localhost:5000/api/boldbiembed>). Copy this URL and paste it into your default web browser.
+  4. Finally, run the application using the command `dotnet run`. Once the application has started, it will display a URL in the command line interface, typically something like http://localhost:5000. Copy this URL and paste it into your default web browser, appending `/api/boldbiembed` to it, as shown in the image below.
 
-      ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6bf36f94-3ec2-4a01-a2c1-28096fd7c8b1)
+      ![dashboard image](/images/core-running.png)
 
 ### Angular sample via VS Code
 
@@ -76,7 +76,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
   3. To run the application, use the command `npm start` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., <http://localhost:4200>). Copy this URL and paste it into your default web browser.
 
-     ![dashboard view](https://github.com/boldbi/aspnet-core-sample/assets/91586758/3e70fa58-908c-415a-9fa0-ef624e955d52)
+     ![dashboard view](/images/angular-dashboard.png)
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/angular-with-javascript/#how-to-run-the-sample?utm_source=github&utm_medium=backlinks) to know how to run the sample.
 
