@@ -4,7 +4,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/3e70fa58-908c-415a-9fa0-ef624e955d52)
+![Dashboard View](/images/dashboard.png)
 
 ## Requirements/Prerequisites
 
@@ -21,7 +21,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 * Please ensure you have enabled embed authentication on the `embed settings` page. If it is not currently enabled, please refer to the following image or detailed [instructions](https://help.boldbi.com/site-administration/embed-settings/#get-embed-secret-code?utm_source=github&utm_medium=backlinks) to enable it.
   
-    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b3a81978-9eb4-42b2-92bb-d1e2735ab007)
+    ![Embed Settings](/images/enable-embedsecretkey.png)
 
 * To download the `embedConfig.json` file, please follow this [link](https://help.boldbi.com/site-administration/embed-settings/#get-embed-configuration-file?utm_source=github&utm_medium=backlinks) for reference. Additionally, you can refer to the following image for visual guidance.
 
