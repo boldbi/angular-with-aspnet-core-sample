@@ -19,7 +19,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ### Supported browsers
   
-* Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
+* Google Chrome, Microsoft Edge, and Mozilla Firefox.
 
 ## Configuration
 
