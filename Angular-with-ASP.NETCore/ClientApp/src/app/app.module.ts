@@ -5,13 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { appService } from './app.service';
 import { AppComponent } from './app.component';
-import { DashboardListing } from './dashboard-listing/dashboard-listing.component';
+import { Dashboard } from './dashboard/dashboard.component';
 
 @NgModule({
    imports: [
    BrowserModule,
        RouterModule.forRoot([
-       { path: '', component: DashboardListing },
+       { path: '', component: Dashboard },
         ]
     ),
     HttpClientModule
@@ -19,7 +19,7 @@ import { DashboardListing } from './dashboard-listing/dashboard-listing.componen
        providers: [appService],
        declarations: [
        AppComponent,
-       DashboardListing,
+       Dashboard,
     ],
 
     bootstrap: [AppComponent]

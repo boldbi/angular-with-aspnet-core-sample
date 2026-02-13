@@ -11,11 +11,8 @@ import { appService } from './app.service';
     //ASP.NET Core application would be run on https://localhost:5001;http://localhost:5000, which needs to be set as `apiHost`
     public apiHost="https://localhost:7051/";
 
-    //Url of the GetDetails action in ValuesController of the ASP.NET Core application
-    public authorizationUrl= "api/boldbiembed/authorizationserver";
-  
-    //Url of the GetDashboards action in ValuesController of the ASP.NET Core application
-    public getDashboardsUrl= "api/boldbiembed/getdashboards";
+    //Url of the TokenGeneration action in BoldBIEmbedController of the ASP.NET Core application
+    public tokenGenerationUrl = "api/boldbiembed/tokengeneration";
 
     public getEmbedConfigUrl= "api/boldbiembed/getdata";
 
