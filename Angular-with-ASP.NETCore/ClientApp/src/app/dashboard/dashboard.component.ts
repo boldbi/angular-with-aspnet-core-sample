@@ -12,7 +12,7 @@ import { DashboardService } from '../dashboard.service';
     providers: [appService]
 })
 
-export class DashboardListing implements OnInit {
+export class Dashboard implements OnInit {
 
     public dashboardsList!: Item[];
     result: any;
@@ -43,38 +43,35 @@ export class DashboardListing implements OnInit {
             }
         })
 
-        // this._app.Gettoken(this._appComponent.dashboardServerApiUrl,this._appComponent.userId,this._appComponent.userPassword).subscribe(data => {
-        //     this.result = data;
-        //     this._appComponent.token = JSON.parse(this.result.Token).access_token;
-        //     this._app.GetDashboards(this._appComponent.getDashboardsUrl).subscribe(data => {
-        //         this._appComponent.dashboards = <any>data;
-        //         this.dashboardsList = this._appComponent.dashboards;
-        //     });
-        // });
-
-        this._app.GetDashboards(this._appComponent.apiHost + this._appComponent.getDashboardsUrl).subscribe(data => {
-            this._appComponent.dashboards = <any>data;
-            this.dashboardsList = this._appComponent.dashboards;
-            this.renderDashboard(this.dashboardsList[0]);
-        });
+        this.renderDashboard();
     }
 
-    renderDashboard(dashboard: Item) {
-        this.dashboard= BoldBI.create({
-            serverUrl: this._appComponent.baseUrl,
-            dashboardId: this.dashboardService.embedConfig.DashboardId,
-            embedContainerId: "dashboard",
-            embedType: this.dashboardService.embedConfig.EmbedType,
-            environment: this.dashboardService.embedConfig.Environment,
-            width:"100%",
-            height:"100%",
-            expirationTime:100000,
-            authorizationServer: {
-                url:this._appComponent.apiHost + this._appComponent.authorizationUrl
-            }
-        });
+    getEmbedToken() {
+        return fetch(this._appComponent.apiHost + this._appComponent.tokenGenerationUrl, { // Backend application URL
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({})
+        })
+            .then(response => {
+                if (!response.ok) throw new Error("Token fetch failed");
+                return response.text();
+            });
+    }
 
-        console.log(this.dashboard);
-        this.dashboard.loadDashboard();        
-    } 
+    renderDashboard() {
+        this.getEmbedToken()
+            .then(accessToken => {
+                const dashboard = BoldBI.create({
+                    serverUrl: this._appComponent.baseUrl,
+                    dashboardId: this.dashboardService.embedConfig.DashboardId,
+                    embedContainerId: "dashboard",
+                    embedToken: accessToken
+                });
+
+                dashboard.loadDashboard();
+            })
+            .catch(err => {
+                console.error("Error rendering dashboard:", err);
+            });
+    };
 }
