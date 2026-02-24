@@ -8,7 +8,7 @@ import { DashboardService } from '../dashboard.service';
 // declare var BoldBI: any;
 @Component({
     selector: 'app-dashboard-listing',
-    templateUrl: './dashboard-listing.component.html',
+    templateUrl: './dashboard.component.html',
     providers: [appService]
 })
 

@@ -39,7 +39,6 @@ export class Dashboard implements OnInit {
                 this._appComponent.dashboardServerApiUrl = this.dashboardService.embedConfig.ServerUrl + "/api";
             }
         })
-
         this.renderDashboard();
     }
 
