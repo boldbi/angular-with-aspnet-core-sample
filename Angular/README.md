@@ -11,7 +11,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 * [.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** Node.js v18.18 to v20.15 are supported
+ > **NOTE:** Node.js v18.18 to v20.20 are supported
 
 ### Supported browsers
   
@@ -44,7 +44,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ### Angular sample via CLI
 
-  1. Open the command prompt and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular%2014) where the project is located.
+  1. Open the command prompt and navigate to the specified file [location](https://github.com/boldbi/angular-with-aspnet-core-sample/tree/master/Angular) where the project is located.
 
   2. To install all dependent packages, use the following command `npm install`.
 
@@ -52,7 +52,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Developer IDE
 
-* Visual studio code(<https://code.visualstudio.com/download>)
+* [Visual Studio Code](<https://code.visualstudio.com/download>)
 
 ## Run a Sample Using Visual Studio Code
 

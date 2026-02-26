@@ -11,7 +11,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 * [.NET Core 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
 * [Node.js](https://nodejs.org/en/)
 
- > **NOTE:** Node.js v18.18 to v20.15 are supported
+ > **NOTE:** Node.js v18.18 to v20.20 are supported
 
 ### Help link
 
@@ -48,7 +48,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
 ## Developer IDE
 
-* Visual studio code(<https://code.visualstudio.com/download>)
+* [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Run a Sample Using Visual Studio Code
 
@@ -60,7 +60,7 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 
   4. Build your .NET project by executing the `dotnet build` command in the terminal.
   
-  5. To run the application, use the command `dotnet run` in the terminal. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., <https://localhost:44459>).
+  5. To run the application, use the command `dotnet run` in the terminal. After executing the command, the application will automatically launch in the default browser. You can access it at the specified port number (e.g., https://localhost:44459).
 
      ![dashboard view](/images/Angular-core-dashboard.png)
 
